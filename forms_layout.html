@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - Fresh Practice</title>
+    <style>
+        body {
+            background-color: #ffe5b4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .section-box {
+            background: #ffffff;
+            padding: 25px;
+            margin: 25px auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input, select, textarea, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007acc;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f99;
+        }
+
+        fieldset {
+            border: 2px dashed #ccc;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        hr {
+            margin: 40px 0;
+            border-top: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Form Practice</h1>
+
+    <div class="section-box">
+        <h2>Task 1: Basic Form</h2>
+        <form>
+            <label for="fullname">Your Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <button type="submit">Send Info</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 2: Inputs Variety</h2>
+        
+        <label for="login-user">Username:</label>
+        <input type="text" id="login-user" required>
+
+        <label for="login-pass">Create Password:</label>
+        <input type="password" id="login-pass" required>
+
+        <label for="user-email">Your Email:</label>
+        <input type="email" id="user-email" required>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 3: Choices</h2>
+        <label><input type="checkbox" id="updates"> Get Updates</label>
+
+        <p>Select Favorite Language:</p>
+        <label><input type="radio" name="language" value="html"> HTML</label>
+        <label><input type="radio" name="language" value="css"> CSS</label>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 4: Drop-down Menu</h2>
+        <label for="country">Choose a Country:</label>
+        <select id="country">
+            <option value="usa">USA</option>
+            <option value="india">India</option>
+            <option value="germany">Germany</option>
+        </select>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 5: Feedback Box</h2>
+        <label for="feedback">Share Your Thoughts:</label>
+        <textarea id="feedback" rows="4"></textarea>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 6: Upload File</h2>
+        <label for="upload-pic">Upload Profile Picture:</label>
+        <input type="file" id="upload-pic">
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 7: Buttons</h2>
+        <button type="submit" style="background-color: #4CAF50;">Submit Form</button>
+        <button type="reset" style="background-color: #f44336;">Clear Form</button>
+        <button type="button" style="background-color: #ff9800;" onclick="alert('Thanks for clicking!')">Say Hi</button>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 8: Grouped Fields</h2>
+        <fieldset>
+            <legend>Account Info</legend>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname">
+        </fieldset>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 9: Validations</h2>
+
+        <label for="username-new">Create Username:</label>
+        <input type="text" id="username-new" required>
+
+        <label for="phone-number">Phone (Format: 123-456-7890):</label>
+        <input type="text" id="phone-number" pattern="\d{3}-\d{3}-\d{4}" required>
+
+        <label for="user-age">Your Age:</label>
+        <input type="number" id="user-age" min="18" max="99" required>
+
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 10: Email Capture</h2>
+        <form>
+            <label for="capture-email">Enter Email:</label>
+            <input type="email" id="capture-email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 11: Login and Register</h2>
+
+        <form>
+            <h3>Login Form</h3>
+            <label for="login-mail">Email:</label>
+            <input type="email" id="login-mail" required>
+            <button type="submit">Log In</button>
+        </form>
+
+        <form>
+            <h3>Register Form</h3>
+            <label for="reg-mail">Email:</label>
+            <input type="email" id="reg-mail" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 12: Hidden Field</h2>
+        <input type="hidden" name="session_id" value="abc123">
+        <p>This form has hidden data!</p>
+    </div>
+
+    <hr>
+
+    <div class="section-box">
+        <h2>Task 13: Username Again</h2>
+        <label for="simple-username">Choose Username:</label>
+        <input type="text" id="simple-username" required>
+    </div>
+
+</body>
+</html>
